@@ -44,10 +44,13 @@ export const birdReducer=(state=birdInitailState,action)=>{
         ]
 
         case ADD_LIKES:
+            const currentBird=state.find((bird)=>bird.bird===action.payload.bird)
+            console.log(currentBird)
             return[
-                ...state,
+                // ...state,
                 {
-                    ...state,
+                    bird:currentBird.bird,
+                    likes:currentBird.likes+1
                    
                 }
                 
