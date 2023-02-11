@@ -1,4 +1,5 @@
-import { createStore } from "redux";
-import {reducer} from "./Reducer"
+import { createStore,combineReducers } from "redux";
+import {birdReducer,likeReducer} from "./Reducer"
 
-const store=createStore(reducer)
+const rootReducer=combineReducers({birdReducer,likeReducer})
+export const store=createStore(rootReducer)
