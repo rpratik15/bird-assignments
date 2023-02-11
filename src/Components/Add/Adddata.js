@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { addbirds} from "../Redux/Action"
+import { addBirds} from "../Redux/Action"
 
 
 
@@ -10,7 +10,7 @@ function Adddata() {
     const [data,setData]=useState("")
 
     const onClickHandle=()=>{
-      dispatch(addbirds(data))
+      dispatch(addBirds(data))
     }
 
   return (

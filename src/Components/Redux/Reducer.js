@@ -1,6 +1,15 @@
 
 import {ADD_BIRDS} from "./Action"
-const birdInitailState=[]
+// const birdInitailState=[]
+const birdInitailState=[
+{
+    bird:"Robin",
+    likes:1
+}
+
+]
+    
+
 
 
 const likeInitialState={
@@ -25,8 +34,10 @@ export const birdReducer=(state=birdInitailState,action)=>{
             //     ...state,
             //    birdsList:[...state.birdsList,action.payload]
             ...state,
+            {...state,
             
-                action.payload
+             bird:action.payload
+            }
             
         ]
             default:
