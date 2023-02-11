@@ -6,7 +6,11 @@ export const addBirds=(data)=>({
     payload:data
 })
 
-export const addLikes=()=>({
-    type:ADD_LIKES
+export const addLikes=(bird,likes)=>({
+    type:ADD_LIKES,
+    payload:{
+        bird:bird,
+        likes:likes
+    }
 })
 

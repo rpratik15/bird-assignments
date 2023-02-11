@@ -1,5 +1,5 @@
 
-import {ADD_BIRDS} from "./Action"
+import {ADD_BIRDS,ADD_LIKES} from "./Action"
 // const birdInitailState=[]
 const birdInitailState=[
 {
@@ -26,7 +26,7 @@ export const likeReducer=(state=likeInitialState,action)=>{
 }
 
 export const birdReducer=(state=birdInitailState,action)=>{
-//    console.log(state)
+   console.log(state)
     switch(action.type)
     {
         case ADD_BIRDS:
@@ -34,12 +34,24 @@ export const birdReducer=(state=birdInitailState,action)=>{
             //     ...state,
             //    birdsList:[...state.birdsList,action.payload]
             ...state,
-            {...state,
-            
-             bird:action.payload
+            {
+                
+             bird:action.payload,
+             likes:1
+
             }
             
         ]
+
+        case ADD_LIKES:
+            return[
+                ...state,
+                {
+                    ...state,
+                   
+                }
+                
+            ]
             default:
                 return state
     }
